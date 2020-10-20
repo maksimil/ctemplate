@@ -4,4 +4,4 @@ project ("template")
 
 add_executable (template "src/main.cpp")
 
-target_include_directories ("./include")
+target_include_directories (template PUBLIC "./include")
