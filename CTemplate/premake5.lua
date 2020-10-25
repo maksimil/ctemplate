@@ -8,13 +8,13 @@ project "CTemplate"
 
     files
     {
-        "include/**.h",
+        "src/**.h",
         "src/**.c"
     }
 
     includedirs
     {
-        "include"
+        "src"
     }
     
     filter "system:windows"
