@@ -17,5 +17,8 @@ Output["obj"] = "%{wks.location}/bin-int/"..outputdir
 -- include dirs
 Include = {}
 
+-- libraries
+Libraries = {}
+
 -- modules
 include "CTemplate"
