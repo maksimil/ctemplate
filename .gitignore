@@ -1,4 +1,4 @@
-#VS
+# VS
 .vs/
 **.sln
 **.vcxproj
@@ -6,4 +6,5 @@
 **.vcxproj.user
 
 # Build
-out/
+bin/
+bin-int/

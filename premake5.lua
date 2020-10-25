@@ -7,34 +7,15 @@ workspace "CTemplate"
     filter "configurations:*64"
         architecture "x86_64"
 
-outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+-- output
+outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/%{prj.name}"
 
-project "CTemplate"
-    location "."
-    kind "ConsoleApp"
-    language "C"
+Output = {}
+Output["bin"] = "%{wks.location}/bin/"..outputdir
+Output["obj"] = "%{wks.location}/bin-int/"..outputdir
 
-    targetdir ("out/bin/"..outputdir.."/%{prj.name}")
-    objdir ("out/obj/"..outputdir.."/${prj.name}")
+-- include dirs
+Include = {}
 
-    files 
-    {
-        "src/**.c",
-        "include/**.h"
-    }
-
-    includedirs
-    {
-        "include"
-    }
-
-    filter "system:windows"
-        cppdialect "C++17"
-        staticruntime "On"
-        systemversion "latest"
-
-    filter "configurations:Release*"
-        optimize "On"
-
-     filter "configurations:Debug*"
-        symbols "On"
+-- modules
+include "CTemplate"
