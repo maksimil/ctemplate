@@ -5,6 +5,12 @@
 **.vcxproj.filters
 **.vcxproj.user
 
+# gmake
+Makefile
+
+# vscode
+.vscode
+
 # Build
 bin/
 bin-int/
