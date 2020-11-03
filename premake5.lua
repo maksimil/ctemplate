@@ -8,7 +8,7 @@ workspace "CTemplate"
         architecture "x86_64"
 
 -- output
-outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/%{prj.name}"
+outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/"
 
 Output = {}
 Output["bin"] = "%{wks.location}/bin/"..outputdir

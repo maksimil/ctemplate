@@ -2,9 +2,9 @@ project "CTemplate"
     kind "ConsoleApp"
     language "C"
     staticruntime "on"
-    
-    targetdir (Output["bin"])
-    objdir (Output["obj"])
+
+    targetdir (Output.bin.."%{prj.name}")
+    objdir (Output.obj.."%{prj.name}")
 
     files
     {
@@ -16,7 +16,7 @@ project "CTemplate"
     {
         "src"
     }
-    
+
     filter "system:windows"
         systemversion "latest"
 
